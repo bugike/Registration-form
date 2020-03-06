@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register From</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="htitle">Registation Form</div>
+    <div class="description">Fill up the form and have fun!</div>
+    <div class="form-container">
+      <form action="submit.php" method="post">
+
+        <label id="uname" for="username">Username: </label><br>
+        <input type="text" id="username" name="username" required><br>
+
+        <label id="pw" for="password">Password:</label><br>
+        <span id="pw-description">(8 characters minimum, at least one number,<br>
+          one upper case, and one lower case character)</span><br>
+        <!-- Set up password requirement -->
+        <input type="password" id="password" name="password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
+
+        <!-- Confirm two password match -->
+        <label id="pw2" for="password2">Comfirm Password:</label><br>
+        <input type="password" id="password2" name="password2" required><br>
+
+        <label id="em" for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label id="pn" for="phoneNum">Phone number:</label><br>
+        <input type="tel" id="phoneNum" name="phoneNum" required><br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+
+  </body>
+</html>
